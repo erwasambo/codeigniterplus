@@ -41,10 +41,10 @@
 $active_group = 'default';
 
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = '162.248.143.195';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
-$db['default']['database'] = 'codeigniterplus';
+$db['default']['database'] = 'chroniclesdb';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
