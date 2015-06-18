@@ -14,7 +14,7 @@ RUN npm config set prefix /usr/local
 RUN npm install -g bower
 
 #App setup
-RUN rm -fr /app && git clone https://github.com/ranacseruet/codeigniterplus.git /app
+RUN rm -fr /app && git clone https://github.com/erwasambo/codeigniterplus.git /app
 ADD docker-files/makefile /app/makefile
 RUN cd /app && make
 ADD docker-files/database.php /app/application/config/database.php
