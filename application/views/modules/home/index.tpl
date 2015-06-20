@@ -185,8 +185,6 @@
             <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
             <!-- this is the wrapper for the content -->
             <div class="st-content">
-                <!-- extra div for emulating position:fixed of the menu -->
-                <div class="st-content-inner">
                     <div class="container">
                         <div class="cover profile">
                             <div class="wrapper">
@@ -1113,8 +1111,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /st-content-inner -->
             </div>
             <!-- /st-content -->
         </div>
