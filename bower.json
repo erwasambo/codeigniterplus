@@ -1,5 +1,5 @@
 {
-  "name": "codeigniterplus",
+  "name": "africachronicles",
   "version": "0.0.0",
   "license": "MIT",
   "ignore": [
@@ -9,9 +9,9 @@
     "test",
     "tests"
   ],
-  "homepage": "https://github.com/nilacseruet/codeigniterplus",
+  "homepage": "http://africachronicles.com/",
   "authors": [
-    "mahfuja nilufar <nila_cse_ruet@yahoo.com>"
+    "erick wasambo <erickwasambo@gmail.com>"
   ],
   "dependencies": {
    
