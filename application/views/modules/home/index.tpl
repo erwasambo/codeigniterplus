@@ -4,7 +4,6 @@
         <h1 class="text-danger">Welcome To Africa Chronicles!</h1>
         <div class="row">
             <div class="container">
-                <div class="col-md-6">
 <!-- Wrapper required for sidebar transitions -->
     <div class="st-container">
         <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
@@ -1128,12 +1127,6 @@
         <!-- /st-pusher -->
     </div>
     <!-- /st-container -->
-
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive pull-right" src="{$base_url}images/desktop_mobile.png" alt="Desktop & Mobile Template">
-
-                </div>
             </div>
         </div>
     </div>
