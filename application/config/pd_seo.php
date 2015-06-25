@@ -8,7 +8,7 @@
 */
 
 //Home page
-$config['CP_home_index_title'] = "Africa Chronicles::Home"; 
+$config['CP_home_index_title'] = "Africa Chronicles"; 
 $config['CP_home_index_key'] = "Africa Chronicles"; 
 $config['CP_home_index_desc'] = "Everything Africa"; 
 

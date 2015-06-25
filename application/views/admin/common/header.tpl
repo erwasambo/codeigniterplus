@@ -14,7 +14,8 @@
         <ul class="nav navbar-nav">
             <li><a href="{$base_url}">Home</a></li>
             <li><a href="{$base_url}admin/users">Users</a></li>
-            <li><a href="{$base_url}admin/message">Messages</a></li> 
+            <li><a href="{$base_url}admin/chronicle">Chronicles</a></li>
+            <li><a href="{$base_url}admin/message">Messages</a></li>  
             <li><a href="{$base_url}myaccount/logout">Log Out</a></li>
         </ul>
     </div>

@@ -15,8 +15,8 @@
 |
 */
 
-$config['DX_website_name'] = 'Your Website';
-$config['DX_webmaster_email'] = 'webmaster@yourhost.com';
+$config['DX_website_name'] = 'Africa  Chronicles';
+$config['DX_webmaster_email'] = 'webmaster@africachronicles.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -245,7 +245,7 @@ $config['DX_reset_password_failed_view'] = 'auth/general_message';
 //Added By Rana, for seo configs
 
 //Login page
-$config['DX_Auth_index_title'] = "Login | Programmerz.com"; 
+$config['DX_Auth_index_title'] = "Login | AfricaChronicles.com"; 
 $config['DX_Auth_index_key'] = "Login"; 
 $config['DX_Auth_index_desc'] = "Login";
 

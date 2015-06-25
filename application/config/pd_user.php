@@ -14,6 +14,6 @@
 */
 //User Index page
 $config['CP_user_index_title'] = "Welcome {user}"; 
-$config['CP_user_index_key'] = "CodeigniterPlus"; 
-$config['CP_user_index_desc'] = "Ultimate Codeigniter Enhancements";
+$config['CP_user_index_key'] = "AfricaChronicles"; 
+$config['CP_user_index_desc'] = "Ultimate AfricaChronicles Enhancements";
 
