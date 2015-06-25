@@ -85,3 +85,5 @@ Your Contribution
 
 You can choose from the above 'Future considerations' section as well. In that case, you can optionally create a [issue](https://github.com/ranacseruet/codeigniterplus/issues) mentioning which feature you want to work on. Then, fork the repo, implement the feature/make changes and create a pull request. Thanks!
 
+=======
+# codeigniterplus
