@@ -134,9 +134,9 @@ class DxChronicles
     private $twitterId;
     
     /**
-     * @var DxRoles
+     * @var DxChronicleCategory
      *
-     * @ManyToOne(targetEntity="DxRoles")
+     * @ManyToOne(targetEntity="DxChronicleCategory")
      * @JoinColumns({
      *   @JoinColumn(name="role_id", referencedColumnName="id")
      * })
@@ -144,9 +144,9 @@ class DxChronicles
     private $role;
     
     /**
-     * @var DxUserProfile
+     * @var DxChronicleComment
      * 
-     * @OneToOne(targetEntity="DxUserProfile", mappedBy="user") 
+     * @OneToOne(targetEntity="DxChronicleComment", mappedBy="chronicle") 
      */
     private $userProfile;
 
@@ -516,10 +516,10 @@ class DxChronicles
     /**
      * Set role
      *
-     * @param DxRoles $role
-     * @return DxUsers
+     * @param DxChronicleCategory $role
+     * @return DxChronicles
      */
-    public function setRole(\DxRoles $role = null)
+    public function setRole(\DxChronicleCategory $role = null)
     {
         $this->role = $role;
         return $this;
@@ -528,7 +528,7 @@ class DxChronicles
     /**
      * Get role
      *
-     * @return DxRoles 
+     * @return DxChronicleCategory 
      */
     public function getRole()
     {
@@ -538,7 +538,7 @@ class DxChronicles
     /**
      * Get userProfile
      *
-     * @return DxUserProfile 
+     * @return DxChronicleComment 
      */
     public function getUserProfile()
     {

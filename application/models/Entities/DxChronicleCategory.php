@@ -72,7 +72,7 @@ class DxChronicleCategory
      * Set name
      *
      * @param string $name
-     * @return DxRoles
+     * @return DxChronicleCategory
      */
     public function setName($name)
     {
