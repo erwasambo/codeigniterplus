@@ -26,7 +26,7 @@ class Chronicle extends Admin_Controller {
 		try {
 			$pagingConfig = $this->paginationlib->initPagination("/admin/chronicle/index", $this->chroniclemodel->get_count());
 			$this->data["pagination_helper"] = $this->pagination;
-			$this->data["chronicles"] = $this->chroniclemodel->get_by_range($start_record, $pagingConfig['per_page']);
+			$this->data["chronicle"] = $this->chroniclemodel->get_by_range($start_record, $pagingConfig['per_page']);
 
 			return $this->view();
 		} catch (Exception $err) {
