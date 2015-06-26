@@ -14,16 +14,16 @@
         </thead>
         <tbody>
 
-            {foreach from=$chronicles item=chronicle name="outer"}
+            {foreach from=$chronicle item=chronicleitem name="outer"}
                 <tr>
-                    <td> <input type="checkbox" name="id[]" value="{$chronicle->getId()}"/> </td>
-                    <td> {$chronicle->getId()} </td>
-                    <td> {$chronicle->getName()} </td>
-                    <td> {$chronicle->getEmail()} </td>
-                    <td> {$chronicle->getSubject()} </td>
-                    <td> {$chronicle->getMessage()|truncate:80} </td>
-                    <td> {$chronicle->getTime()|date_format} </td>
-                    <td> <a href="{$base_url}admin/chronicle/edit/{$chronicle->getId()}">View/Edit</a> </td>
+                    <td> <input type="checkbox" name="id[]" value="{$chronicleitem->getId()}"/> </td>
+                    <td> {$chronicleitem->getId()} </td>
+                    <td> {$chronicleitem->getName()} </td>
+                    <td> {$chronicleitem->getEmail()} </td>
+                    <td> {$chronicleitem->getSubject()} </td>
+                    <td> {$chronicleitem->getMessage()|truncate:80} </td>
+                    <td> {$chronicleitem->getTime()|date_format} </td>
+                    <td> <a href="{$base_url}admin/chronicle/edit/{$chronicleitem->getId()}">View/Edit</a> </td>
                 </tr>
             {/foreach}
 

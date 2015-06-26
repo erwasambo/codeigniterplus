@@ -12,9 +12,9 @@
         <input type="text" name="{$chronicle_form.subject.field}" value="{$chronicle->getSubject()}" class="form-control required" size="30"  />
     </div>
     <div class="form-group">
-        <label class="control-label" for="{$chronicle_form.chronicle.field}">{$chronicle_form.chronicle.label}</label>
-        <textarea name="{$chronicle_form.chronicle.field}" class="form-control required" size="30">
-            {$chronicle->getMessage()}
+        <label class="control-label" for="{$chronicle_form.message.field}">{$chronicle_form.chronicle.label}</label>
+        <textarea name="{$chronicle_form.message.field}" class="form-control required" size="30">
+            {$message->getMessage()}
         </textarea>
     </div>
     <div class="form-group">
