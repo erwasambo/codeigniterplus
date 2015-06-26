@@ -5,7 +5,7 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * DxUsers
+ * DxChronicles
  *
  * @Table(name="dx_chronicles")
  * @Entity
@@ -165,7 +165,7 @@ class DxChronicles
      * Set username
      *
      * @param string $username
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setUsername($username)
     {
@@ -187,7 +187,7 @@ class DxChronicles
      * Set password
      *
      * @param string $password
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setPassword($password)
     {
@@ -209,7 +209,7 @@ class DxChronicles
      * Set email
      *
      * @param string $email
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setEmail($email)
     {
@@ -231,7 +231,7 @@ class DxChronicles
      * Set banned
      *
      * @param boolean $banned
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setBanned($banned)
     {
@@ -253,7 +253,7 @@ class DxChronicles
      * Set banReason
      *
      * @param string $banReason
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setBanReason($banReason)
     {
@@ -275,7 +275,7 @@ class DxChronicles
      * Set newpass
      *
      * @param string $newpass
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setNewpass($newpass)
     {
@@ -297,7 +297,7 @@ class DxChronicles
      * Set newpassKey
      *
      * @param string $newpassKey
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setNewpassKey($newpassKey)
     {
@@ -319,7 +319,7 @@ class DxChronicles
      * Set newpassTime
      *
      * @param datetime $newpassTime
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setNewpassTime($newpassTime)
     {
@@ -341,7 +341,7 @@ class DxChronicles
      * Set lastIp
      *
      * @param string $lastIp
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setLastIp($lastIp)
     {
@@ -363,7 +363,7 @@ class DxChronicles
      * Set lastLogin
      *
      * @param datetime $lastLogin
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setLastLogin($lastLogin)
     {
@@ -385,7 +385,7 @@ class DxChronicles
      * Set created
      *
      * @param datetime $created
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setCreated($created)
     {
@@ -407,7 +407,7 @@ class DxChronicles
      * Set modified
      *
      * @param datetime $modified
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setModified($modified)
     {
@@ -429,7 +429,7 @@ class DxChronicles
      * Set fbSession
      *
      * @param string $fbSession
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setFbSession($fbSession)
     {
@@ -451,7 +451,7 @@ class DxChronicles
      * Set fbId
      *
      * @param integer $fbId
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setFbId($fbId)
     {
@@ -473,7 +473,7 @@ class DxChronicles
      * Set twitterSession
      *
      * @param string $twitterSession
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setTwitterSession($twitterSession)
     {
@@ -495,7 +495,7 @@ class DxChronicles
      * Set twitterId
      *
      * @param integer $twitterId
-     * @return DxUsers
+     * @return DxChronicles
      */
     public function setTwitterId($twitterId)
     {

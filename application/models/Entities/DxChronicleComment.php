@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DxChronicleComment
  *
- * @Table(name="dx_chronicle_profile")
+ * @Table(name="dx_chronicle_comment")
  * @Entity
  */
 class DxChronicleComment
