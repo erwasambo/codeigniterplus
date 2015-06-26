@@ -37,15 +37,15 @@
         }
     };
     </script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/vendor-core.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/vendor-tables.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/vendor-forms.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/vendor-maps.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-essentials.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-layout.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-sidebar.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-timeline.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-chat.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/module-maps.min.js"></script>
-<script  async type="text/javascript" language="javascript" src="{$cdn_url}themeforestscripts/theme-core.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/vendor-core.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/vendor-tables.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/vendor-forms.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/vendor-maps.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-essentials.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-layout.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-sidebar.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-timeline.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-chat.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/module-maps.min.js"></script>
+<script  async type="text/javascript" language="javascript" src="{$cdn_url}scripts/themeforestscripts/theme-core.min.js"></script>
 <!--/ Themeforest script -->
