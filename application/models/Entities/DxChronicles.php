@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DxUsers
  *
- * @Table(name="dx_users")
+ * @Table(name="dx_chronicles")
  * @Entity
  */
 class DxChronicles
