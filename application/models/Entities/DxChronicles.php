@@ -19,28 +19,8 @@ class DxChronicles
      * @Id
      * @GeneratedValue(strategy="IDENTITY")
      */
+
     private $id;
-
-    /**
-     * @var string $username
-     *
-     * @Column(name="username", type="string", length=25, nullable=false)
-     */
-    private $username;
-
-    /**
-     * @var string $password
-     *
-     * @Column(name="password", type="string", length=34, nullable=false)
-     */
-    private $password;
-
-    /**
-     * @var string $email
-     *
-     * @Column(name="email", type="string", length=100, nullable=false)
-     */
-    private $email;
 
     /**
      * @var boolean $banned
@@ -56,19 +36,6 @@ class DxChronicles
      */
     private $banReason;
 
-    /**
-     * @var string $newpass
-     *
-     * @Column(name="newpass", type="string", length=34, nullable=true)
-     */
-    private $newpass;
-
-    /**
-     * @var string $newpassKey
-     *
-     * @Column(name="newpass_key", type="string", length=32, nullable=true)
-     */
-    private $newpassKey;
 
     /**
      * @var datetime $newpassTime
@@ -138,17 +105,17 @@ class DxChronicles
      *
      * @ManyToOne(targetEntity="DxChronicleCategory")
      * @JoinColumns({
-     *   @JoinColumn(name="role_id", referencedColumnName="id")
+     *   @JoinColumn(name="chronicleCategory_id", referencedColumnName="id")
      * })
      */
-    private $role;
+    private $chronicleCategory;
     
     /**
      * @var DxChronicleComment
      * 
      * @OneToOne(targetEntity="DxChronicleComment", mappedBy="chronicle") 
      */
-    private $userProfile;
+    private $chronicleComment;
 
 
     /**
@@ -514,31 +481,53 @@ class DxChronicles
     }
     
     /**
-     * Set role
+     * Set chronicleCategory
      *
-     * @param DxChronicleCategory $role
+     * @param DxChronicleCategory $chronicleCategory
      * @return DxChronicles
      */
-    public function setRole(\DxChronicleCategory $role = null)
+    public function setChronicleCategory(\DxChronicleCategory $chronicleCategory = null)
     {
-        $this->role = $role;
+        $this->chronicleCategory = $chronicleCategory;
         return $this;
     }
 
     /**
-     * Get role
+     * Get chronicleCategory
      *
      * @return DxChronicleCategory 
      */
-    public function getRole()
+    public function getChronicleCategory()
     {
-        return $this->role;
+        return $this->chronicleCategory;
+    }
+    
+    /**
+     * Get chronicleComment
+     *
+     * @return DxChronicleComment 
+     */
+    public function getChronicleComment()
+    {
+        return $this->chronicleComment;
+    }
+
+    /**
+     * Set userProfile
+     *
+     * @param DxUserProfile $userProfile
+     * @return PdMessage
+     */
+    public function setUserProfile(\DxUserProfile $userProfile = null)
+    {
+        $this->userProfile = $userProfile;
+        return $this;
     }
     
     /**
      * Get userProfile
      *
-     * @return DxChronicleComment 
+     * @return DxUserProfile 
      */
     public function getUserProfile()
     {
