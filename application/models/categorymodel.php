@@ -13,6 +13,6 @@ class Categorymodel extends My_DModel {
 
 	function __construct(){
 		parent::__construct();
-		$this->init("DxCategory", $this->doctrine->em);
+		$this->init("DxChronicleCategory", $this->doctrine->em);
 	}
 }
