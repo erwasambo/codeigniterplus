@@ -31,4 +31,16 @@ class Mapper {
 		$contact->setTime(new DateTime());
 		return $contact;
 	}
+	function formToChronicle($input, $chronicle_form, $chronicle = NULL)
+	{
+		/**
+		 * @var PdContact $contact
+		 */
+		if (empty($chronicle)) {
+			$chronicle = new PdMessage();
+		}
+
+		$chronicle->setDescription($input->post($chronicle_form["description"]["field"]));
+		return $chronicle;
+	}
 }

@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 use \DxChronicles;
 use \DxChroniclePhoto;
 use \DxChronicleComment;
+use \DxChronicleCountry;
 use \DxChronicleCategory;
 
 /**

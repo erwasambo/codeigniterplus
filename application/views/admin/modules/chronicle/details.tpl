@@ -1,20 +1,33 @@
 <form action="{$action_url}" method="POST" class="well col-md-6">
+
+
+
+
     <div class="form-group">
-        <label class="control-label" for="{$chronicle_form.name.field}">{$chronicle_form.name.label}</label>
-        <input type="text" name="{$chronicle_form.name.field}" value="{$chronicle->getName()}" class="required form-control" size="30"  />
+        <label class="control-label" for="{$chronicle_form.chronicleCategory.field}">{$chronicle_form.chronicleCategory.label}</label>
+        <input type="text" name="{$chronicle_form.chronicleCategory.field}" value="{$chronicle->getChronicleCategory()}" class="required form-control" size="30"  />
     </div>
     <div class="form-group">
         <label class="control-label" for="{$chronicle_form.email.field}">{$chronicle_form.email.label}</label>
-        <input type="text" name="{$chronicle_form.email.field}" value="{$chronicle->getEmail()}" class=" form-control required" size="30"  />
+        <input type="text" name="{$chronicle_form.description.field}" value="{$chronicle->getDescription()}" class=" form-control required" size="30"  />
     </div>
     <div class="form-group">
         <label class="control-label" for="{$chronicle_form.subject.field}">{$chronicle_form.subject.label}</label>
-        <input type="text" name="{$chronicle_form.subject.field}" value="{$chronicle->getSubject()}" class="form-control required" size="30"  />
+        <input type="text" name="{$chronicle_form.chronicleCategory.field}" value="{$chronicle->getChronicleCategory()}" class="form-control required" size="30"  />
     </div>
+
+
+
+
+
+
+
+
+
     <div class="form-group">
-        <label class="control-label" for="{$chronicle_form.message.field}">{$chronicle_form.chronicle.label}</label>
-        <textarea name="{$chronicle_form.message.field}" class="form-control required" size="30">
-            {$message->getMessage()}
+        <label class="control-label" for="{$chronicle_form.description.field}">{$chronicle_form.description.label}</label>
+        <textarea name="{$chronicle_form.description.field}" class="form-control required" size="30">
+            {$chronicle->getDescription()}
         </textarea>
     </div>
     <div class="form-group">

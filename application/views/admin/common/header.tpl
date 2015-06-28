@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#"> 
-            <img width="160" height="28" alt="Africa Chronicles" src="{$base_url}images/logo.png">
+            <img width="240" height="100" alt="Africa Chronicles" src="{$base_url}images/logo.png">
         </a>
     </div>
     <div class="collapse navbar-collapse">
@@ -15,6 +15,8 @@
             <li><a href="{$base_url}">Home</a></li>
             <li><a href="{$base_url}admin/users">Users</a></li>
             <li><a href="{$base_url}admin/chronicle">Chronicles</a></li>
+            <li><a href="{$base_url}admin/category">Categories</a></li>
+            <li><a href="{$base_url}admin/country">Country</a></li>
             <li><a href="{$base_url}admin/message">Messages</a></li>  
             <li><a href="{$base_url}myaccount/logout">Log Out</a></li>
         </ul>

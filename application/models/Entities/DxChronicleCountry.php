@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * DxChronicleCategory
+ * DxChronicleCountry
  *
- * @Table(name="dx_chronicle_category")
+ * @Table(name="dx_chronicle_country")
  * @Entity
  */
-class DxChronicleCategory
+class DxChronicleCountry
 {
     /**
      * @var integer $id
@@ -20,6 +20,7 @@ class DxChronicleCategory
      * @GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
 
     /**
      * @var string $name
@@ -39,11 +40,12 @@ class DxChronicleCategory
         return $this->id;
     }
 
+
     /**
      * Set name
      *
      * @param string $name
-     * @return DxChronicleCategory
+     * @return DxChronicleCountry
      */
     public function setName($name)
     {

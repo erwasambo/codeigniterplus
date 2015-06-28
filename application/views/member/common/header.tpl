@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#"> 
-            <img width="160" height="28" alt="Africa Chronicles" src="{$base_url}images/logo.png">
+            <img width="240" height="100" alt="Africa Chronicles" src="{$base_url}images/logo.png">
         </a>
     </div>
     <div class="collapse navbar-collapse">

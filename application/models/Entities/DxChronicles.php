@@ -23,6 +23,13 @@ class DxChronicles
     private $id;
 
     /**
+     * @var string $description
+     *
+     * @Column(name="description", type="string", length=3000, nullable=false)
+     */
+    private $description;
+
+    /**
      * @var boolean $banned
      *
      * @Column(name="banned", type="boolean", nullable=false)
@@ -35,28 +42,6 @@ class DxChronicles
      * @Column(name="ban_reason", type="string", length=255, nullable=true)
      */
     private $banReason;
-
-
-    /**
-     * @var datetime $newpassTime
-     *
-     * @Column(name="newpass_time", type="datetime", nullable=true)
-     */
-    private $newpassTime;
-
-    /**
-     * @var string $lastIp
-     *
-     * @Column(name="last_ip", type="string", length=40, nullable=false)
-     */
-    private $lastIp;
-
-    /**
-     * @var datetime $lastLogin
-     *
-     * @Column(name="last_login", type="datetime", nullable=false)
-     */
-    private $lastLogin;
 
     /**
      * @var datetime $created
@@ -72,40 +57,13 @@ class DxChronicles
      */
     private $modified;
 
-    /**
-     * @var string $fbSession
-     *
-     * @Column(name="fb_session", type="string", length=1000, nullable=true)
-     */
-    private $fbSession;
-    
-    /**
-     * @var string $fbId
-     *
-     * @Column(name="fb_id", type="bigint", nullable=true)
-     */
-    private $fbId;
-    
-    /**
-     * @var string $twitterSession
-     *
-     * @Column(name="twitter_session", type="string", length=1000, nullable=true)
-     */
-    private $twitterSession;
-    
-    /**
-     * @var string $twitterId
-     *
-     * @Column(name="twitter_id", type="bigint", nullable=true)
-     */
-    private $twitterId;
     
     /**
      * @var DxChronicleCategory
      *
      * @ManyToOne(targetEntity="DxChronicleCategory")
      * @JoinColumns({
-     *   @JoinColumn(name="chronicleCategory_id", referencedColumnName="id")
+     *   @JoinColumn(name="chronicle_category_id", referencedColumnName="id", onDelete="CASCADE")
      * })
      */
     private $chronicleCategory;
@@ -117,6 +75,12 @@ class DxChronicles
      */
     private $chronicleComment;
 
+    /**
+     * @var DxChronicleCountry
+     * 
+     * @OneToOne(targetEntity="DxChronicleCountry", mappedBy="country") 
+     */
+    private $chronicleCountry;
 
     /**
      * Get id
@@ -129,69 +93,24 @@ class DxChronicles
     }
 
     /**
-     * Set username
-     *
-     * @param string $username
-     * @return DxChronicles
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-        return $this;
-    }
-
-    /**
-     * Get username
+     * Get description
      *
      * @return string 
      */
-    public function getUsername()
+    public function getDescription()
     {
-        return $this->username;
+        return $this->description;
     }
-
     /**
-     * Set password
+     * Set description
      *
-     * @param string $password
+     * @param string $name
      * @return DxChronicles
      */
-    public function setPassword($password)
+    public function setDescription($description)
     {
-        $this->password = $password;
+        $this->description = $description;
         return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string 
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     * @return DxChronicles
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string 
-     */
-    public function getEmail()
-    {
-        return $this->email;
     }
 
     /**
@@ -200,8 +119,7 @@ class DxChronicles
      * @param boolean $banned
      * @return DxChronicles
      */
-    public function setBanned($banned)
-    {
+    public function setBanned($banned){
         $this->banned = $banned;
         return $this;
     }
@@ -238,115 +156,6 @@ class DxChronicles
         return $this->banReason;
     }
 
-    /**
-     * Set newpass
-     *
-     * @param string $newpass
-     * @return DxChronicles
-     */
-    public function setNewpass($newpass)
-    {
-        $this->newpass = $newpass;
-        return $this;
-    }
-
-    /**
-     * Get newpass
-     *
-     * @return string 
-     */
-    public function getNewpass()
-    {
-        return $this->newpass;
-    }
-
-    /**
-     * Set newpassKey
-     *
-     * @param string $newpassKey
-     * @return DxChronicles
-     */
-    public function setNewpassKey($newpassKey)
-    {
-        $this->newpassKey = $newpassKey;
-        return $this;
-    }
-
-    /**
-     * Get newpassKey
-     *
-     * @return string 
-     */
-    public function getNewpassKey()
-    {
-        return $this->newpassKey;
-    }
-
-    /**
-     * Set newpassTime
-     *
-     * @param datetime $newpassTime
-     * @return DxChronicles
-     */
-    public function setNewpassTime($newpassTime)
-    {
-        $this->newpassTime = $newpassTime;
-        return $this;
-    }
-
-    /**
-     * Get newpassTime
-     *
-     * @return datetime 
-     */
-    public function getNewpassTime()
-    {
-        return $this->newpassTime;
-    }
-
-    /**
-     * Set lastIp
-     *
-     * @param string $lastIp
-     * @return DxChronicles
-     */
-    public function setLastIp($lastIp)
-    {
-        $this->lastIp = $lastIp;
-        return $this;
-    }
-
-    /**
-     * Get lastIp
-     *
-     * @return string 
-     */
-    public function getLastIp()
-    {
-        return $this->lastIp;
-    }
-
-    /**
-     * Set lastLogin
-     *
-     * @param datetime $lastLogin
-     * @return DxChronicles
-     */
-    public function setLastLogin($lastLogin)
-    {
-        $this->lastLogin = $lastLogin;
-        return $this;
-    }
-
-    /**
-     * Get lastLogin
-     *
-     * @return datetime 
-     */
-    public function getLastLogin()
-    {
-        return $this->lastLogin;
-    }
 
     /**
      * Set created
@@ -371,6 +180,14 @@ class DxChronicles
     }
 
     /**
+     * Get modified
+     *
+     * @return datetime 
+     */
+    public function getModified(){
+        return $this->modified;
+    }
+    /**
      * Set modified
      *
      * @param datetime $modified
@@ -383,103 +200,15 @@ class DxChronicles
     }
 
     /**
-     * Get modified
+     * Get chronicleCategory
      *
-     * @return datetime 
+     * @return DxChronicleCategory 
      */
-    public function getModified()
+    public function getChronicleCategory()
     {
-        return $this->modified;
+        return $this->chronicleCategory;
     }
-
-    /**
-     * Set fbSession
-     *
-     * @param string $fbSession
-     * @return DxChronicles
-     */
-    public function setFbSession($fbSession)
-    {
-        $this->fbSession = $fbSession;
-        return $this;
-    }
-
-    /**
-     * Get fbSession
-     *
-     * @return string 
-     */
-    public function getFbSession()
-    {
-        return $this->fbSession;
-    }
-    
-    /**
-     * Set fbId
-     *
-     * @param integer $fbId
-     * @return DxChronicles
-     */
-    public function setFbId($fbId)
-    {
-        $this->fbId = $fbId;
-        return $this;
-    }
-
-    /**
-     * Get fbId
-     *
-     * @return integer 
-     */
-    public function getFbId()
-    {
-        return $this->fbId;
-    }
-    
-    /**
-     * Set twitterSession
-     *
-     * @param string $twitterSession
-     * @return DxChronicles
-     */
-    public function setTwitterSession($twitterSession)
-    {
-        $this->twitterSession = $twitterSession;
-        return $this;
-    }
-
-    /**
-     * Get twitterSession
-     *
-     * @return string 
-     */
-    public function getTwitterSession()
-    {
-        return $this->twitterSession;
-    }
-    
-    /**
-     * Set twitterId
-     *
-     * @param integer $twitterId
-     * @return DxChronicles
-     */
-    public function setTwitterId($twitterId)
-    {
-        $this->twitterId = $twitterId;
-        return $this;
-    }
-
-    /**
-     * Get twitterId
-     *
-     * @return integer 
-     */
-    public function getTwitterId()
-    {
-        return $this->twitterId;
-    }
-    
+        
     /**
      * Set chronicleCategory
      *
@@ -490,16 +219,6 @@ class DxChronicles
     {
         $this->chronicleCategory = $chronicleCategory;
         return $this;
-    }
-
-    /**
-     * Get chronicleCategory
-     *
-     * @return DxChronicleCategory 
-     */
-    public function getChronicleCategory()
-    {
-        return $this->chronicleCategory;
     }
     
     /**
@@ -515,11 +234,31 @@ class DxChronicles
     /**
      * Set userProfile
      *
+     * @param DxChroniclePhoto $chroniclePhoto
+     * @return PdMessage
+     */
+    public function setChroniclePhoto(\DxChroniclePhoto $chroniclePhoto = null){
+        $this->chroniclePhoto = $chroniclePhoto;
+        return $this;
+    }
+    
+    /**
+     * Get chroniclePhoto
+     *
+     * @return DxChroniclePhoto 
+     */
+    public function getChroniclePhoto()
+    {
+        return $this->chroniclePhoto;
+    }
+
+    /**
+     * Set userProfile
+     *
      * @param DxUserProfile $userProfile
      * @return PdMessage
      */
-    public function setUserProfile(\DxUserProfile $userProfile = null)
-    {
+    public function setUserProfile(\DxUserProfile $userProfile = null){
         $this->userProfile = $userProfile;
         return $this;
     }
@@ -532,5 +271,26 @@ class DxChronicles
     public function getUserProfile()
     {
         return $this->userProfile;
+    }
+
+    /**
+     * Set chronicleCountry
+     *
+     * @param DxChronicleCountry $chronicleCountry
+     * @return PdMessage
+     */
+    public function setChronicleCountry(\DxChronicleCountry $chronicleCountry = null){
+        $this->chronicleCountry = $chronicleCountry;
+        return $this;
+    }
+    
+    /**
+     * Get chronicleCountry
+     *
+     * @return DxChronicleCountry 
+     */
+    public function getChronicleCountry()
+    {
+        return $this->chronicleCountry;
     }
 }

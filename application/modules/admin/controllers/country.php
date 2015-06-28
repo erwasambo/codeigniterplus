@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Chronicle extends Admin_Controller {
+class Country extends Admin_Controller {
 
 	/**
 	 * constructor
@@ -9,24 +9,24 @@ class Chronicle extends Admin_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model("chroniclemodel");
+		$this->load->model("countrymodel");
 		$this->load->library('pagination');
 		$this->load->library('app/paginationlib');
 		$this->load->library("app/mapper");
 		$this->load->library("app/formvalidator");
-		$this->load->language("chronicle");
+		$this->load->language("country");
 	}
 
 	/**
-	 * Show chronicle list with pagination
+	 * Show country list with pagination
 	 * @return type View
 	 */
 	public function index($start_record = 0)
 	{
 		try {
-			$pagingConfig = $this->paginationlib->initPagination("/admin/chronicle/index", $this->chroniclemodel->get_count());
+			$pagingConfig = $this->paginationlib->initPagination("/admin/country/index", $this->countrymodel->get_count());
 			$this->data["pagination_helper"] = $this->pagination;
-			$this->data["chronicle"] = $this->chroniclemodel->get_by_range($start_record, $pagingConfig['per_page']);
+			$this->data["country"] = $this->countrymodel->get_by_range($start_record, $pagingConfig['per_page']);
 
 			return $this->view();
 		} catch (Exception $err) {
@@ -36,7 +36,7 @@ class Chronicle extends Admin_Controller {
 	}
 
 	/**
-	 * Show details page of the chronicle and saves the edited information as well
+	 * Show details page of the country and saves the edited information as well
 	 * @param integer $id
 	 * @return view 
 	 */
@@ -44,26 +44,26 @@ class Chronicle extends Admin_Controller {
 	{
 		try {
 			$forms = $this->config->item("rules");
-			$this->data["chronicle_form"] = $forms["chronicle"];
+			$this->data["country_form"] = $forms["contact"];
 
 			if ($this->input->post("submit")) {
 
-				if ($this->formvalidator->isValid("chronicle")) {
-					$chronicle = $this->mapper->formToChronicle($this->input, $this->data["chronicle_form"], $this->chroniclemodel->get($id));
-					if ($this->chroniclemodel->save($chronicle)) {
-						$this->data["status"]->chronicle = $this->lang->line('edit_success');
+				if ($this->formvalidator->isValid("contact")) {
+					$country = $this->mapper->formToMessage($this->input, $this->data["country_form"], $this->countrymodel->get($id));
+					if ($this->countrymodel->save($country)) {
+						$this->data["status"]->country = $this->lang->line('edit_success');
 						$this->data["status"]->success = TRUE;
 					} else {
 						//@todo Valid data, but wasn't save to db
 					}
 				} else {
-					$this->data["status"]->chronicle = validation_errors();
+					$this->data["status"]->country = validation_errors();
 					$this->data["status"]->success = FALSE;
 				}
 			}
 
-			$this->data["chronicle"] = $this->chroniclemodel->get($id);
-			$this->data["action_url"] = base_url() . "admin/chronicle/edit/" . $id;
+			$this->data["country"] = $this->countrymodel->get($id);
+			$this->data["action_url"] = base_url() . "admin/country/edit/" . $id;
 
 			return $this->view();
 		} catch (Exception $err) {
@@ -81,30 +81,30 @@ class Chronicle extends Admin_Controller {
 	{
 		try {
 			$forms = $this->config->item("rules");
-			$this->data["chronicle_form"] = $forms["chronicle"];
+			$this->data["country_form"] = $forms["contact"];
 
 			if ($this->input->post("submit")) {
 				$this->load->library('form_validation');
 				$this->load->helper('form');
 				$fv = $this->form_validation;
-				$fv->set_rules($forms["chronicle"]);
+				$fv->set_rules($forms["contact"]);
 
 				if ($fv->run()) {
-					$chronicle = $this->mapper->formToChronicle($this->input, $this->data["chronicle_form"]);
-					if ($this->chroniclemodel->save($chronicle)) {
-						$this->data["status"]->chronicle = $this->lang->line('add_success');
+					$country = $this->mapper->formToMessage($this->input, $this->data["country_form"]);
+					if ($this->countrymodel->save($country)) {
+						$this->data["status"]->country = $this->lang->line('add_success');
 						$this->data["status"]->success = TRUE;
 					} else {
 						//@todo validated, but can't save data to db
 					}
 				} else {
-					$this->data["status"]->chronicle = validation_errors();
+					$this->data["status"]->country = validation_errors();
 					$this->data["status"]->success = FALSE;
 				}
 			}
 
-			$this->data["action_url"] = base_url() . "admin/chronicle/add";
-			$this->data["chronicle"] = new PdMessage();
+			$this->data["action_url"] = base_url() . "admin/country/add";
+			$this->data["country"] = new PdMessage();
 			return $this->view();
 		} catch (Exception $err) {
 			log_message("error", $err->getMessage());
@@ -113,17 +113,17 @@ class Chronicle extends Admin_Controller {
 	}
 
 	/**
-	 * Delete a record and redirect to chronicle list page
+	 * Delete a record and redirect to country list page
 	 * @return view 
 	 */
 	public function delete()
 	{
 		try {
 			if ($this->input->post("delete")) {
-				$this->chroniclemodel->delete($this->input->post("id"));
+				$this->countrymodel->delete($this->input->post("id"));
 			}
 
-			redirect(base_url() . "admin/chronicle");
+			redirect(base_url() . "admin/country");
 		} catch (Exception $err) {
 			log_message("error", $err->getMessage());
 			return show_error($err->getMessage());
