@@ -78,7 +78,7 @@ class DxChronicles
     /**
      * @var DxChronicleCountry
      * 
-     * @OneToOne(targetEntity="DxChronicleCountry", mappedBy="country") 
+     * @OneToOne(targetEntity="DxChronicleCountry", mappedBy="name") 
      */
     private $chronicleCountry;
 

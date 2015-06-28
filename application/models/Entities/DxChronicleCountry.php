@@ -47,8 +47,7 @@ class DxChronicleCountry
      * @param string $name
      * @return DxChronicleCountry
      */
-    public function setName($name)
-    {
+    public function setName($name){
         $this->name = $name;
         return $this;
     }
