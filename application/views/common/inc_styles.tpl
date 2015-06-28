@@ -10,4 +10,5 @@
 <link type="text/css" rel="stylesheet" href="{$cdn_url}styles/main/themeforescss/module-cover.min.css" />
 <link type="text/css" rel="stylesheet" href="{$cdn_url}styles/main/themeforescss/module-chat.min.css" />
 <link type="text/css" rel="stylesheet" href="{$cdn_url}styles/main/themeforescss/module-maps.min.css" />
+<!--<link type="text/css" rel="stylesheet" href="{$cdn_url}styles/main/themeforescss/styles.css" />-->
 <!---/End of ThemeForest style------>
