@@ -31,8 +31,7 @@ class Mapper {
 		$contact->setTime(new DateTime());
 		return $contact;
 	}
-	function formToChronicle($input, $chronicle_form, $chronicle = NULL)
-	{
+	function formToChronicle($input, $chronicle_form, $chronicle = NULL){
 		/**
 		 * @var PdContact $contact
 		 */
@@ -42,5 +41,16 @@ class Mapper {
 
 		$chronicle->setDescription($input->post($chronicle_form["description"]["field"]));
 		return $chronicle;
+	}
+	function formToCountry($input, $country_form, $country = NULL){
+		/**
+		 * @var PdContact $contact
+		 */
+		if (empty($country)) {
+			$country = new PdMessage();
+		}
+
+		$country->setDescription($input->post($country_form["name"]["field"]));
+		return $country;
 	}
 }

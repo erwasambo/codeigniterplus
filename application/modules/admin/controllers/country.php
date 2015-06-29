@@ -44,12 +44,12 @@ class Country extends Admin_Controller {
 	{
 		try {
 			$forms = $this->config->item("rules");
-			$this->data["country_form"] = $forms["contact"];
+			$this->data["country_form"] = $forms["country"];
 
 			if ($this->input->post("submit")) {
 
-				if ($this->formvalidator->isValid("contact")) {
-					$country = $this->mapper->formToMessage($this->input, $this->data["country_form"], $this->countrymodel->get($id));
+				if ($this->formvalidator->isValid("country")) {
+					$country = $this->mapper->formToCountry($this->input, $this->data["country_form"], $this->countrymodel->get($id));
 					if ($this->countrymodel->save($country)) {
 						$this->data["status"]->country = $this->lang->line('edit_success');
 						$this->data["status"]->success = TRUE;
@@ -81,16 +81,16 @@ class Country extends Admin_Controller {
 	{
 		try {
 			$forms = $this->config->item("rules");
-			$this->data["country_form"] = $forms["contact"];
+			$this->data["country_form"] = $forms["country"];
 
 			if ($this->input->post("submit")) {
 				$this->load->library('form_validation');
 				$this->load->helper('form');
 				$fv = $this->form_validation;
-				$fv->set_rules($forms["contact"]);
+				$fv->set_rules($forms["country"]);
 
 				if ($fv->run()) {
-					$country = $this->mapper->formToMessage($this->input, $this->data["country_form"]);
+					$country = $this->mapper->formToCountry($this->input, $this->data["country_form"]);
 					if ($this->countrymodel->save($country)) {
 						$this->data["status"]->country = $this->lang->line('add_success');
 						$this->data["status"]->success = TRUE;

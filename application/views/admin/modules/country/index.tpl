@@ -5,10 +5,6 @@
                 <th> <input type="checkbox" value=""/> </th>
                 <th> Id </th>
                 <th> Name </th>
-                <th> Email </th>
-                <th> Subject </th>
-                <th> Message </th>
-                <th> Sent </th>
                 <th> Option </th>
             </tr>
         </thead>
@@ -19,10 +15,6 @@
                     <td> <input type="checkbox" name="id[]" value="{$countryitem->getId()}"/> </td>
                     <td> {$countryitem->getId()} </td>
                     <td> {$countryitem->getName()} </td>
-                    <td> {$countryitem->getEmail()} </td>
-                    <td> {$countryitem->getSubject()} </td>
-                    <td> {$countryitem->getMessage()|truncate:80} </td>
-                    <td> {$countryitem->getTime()|date_format} </td>
                     <td> <a href="{$base_url}admin/country/edit/{$countryitem->getId()}">View/Edit</a> </td>
                 </tr>
             {/foreach}
